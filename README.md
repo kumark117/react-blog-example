@@ -12,3 +12,9 @@ This repository is to showcase an example front-end React application using Typi
 - Integrated front-end routing using `react-router`.
 - Fully responsive design using Bootstrap or a similar CSS framework.
 - Implement a build tool, such as `webpack`, to build the application into static files.
+
+## How To Build
+
+For Development With `webpack-dev-server` (Includes Hot Loading): `npm run-script dev`
+
+For Production With `webpack` (Compiles Files to `build` Directory): `npm run-script build`
