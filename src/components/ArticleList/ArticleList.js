@@ -12,7 +12,7 @@ export default class ArticleList extends React.Component {
 
   componentDidMount() {
 
-  /* NOTE: no Support in Internet Explorer for promise.All */
+  /* NOTE: no Support in Internet Explorer for Promise.All */
 
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(urawData => urawData.json())
