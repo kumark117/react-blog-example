@@ -1,5 +1,6 @@
 import React from "react";
 import Jumbotron from 'react-bootstrap/Jumbotron';
+import { Link } from "react-router-dom";
 
 export default class AuthorView extends React.Component {
   constructor(props) {
@@ -29,6 +30,7 @@ export default class AuthorView extends React.Component {
     console.log(this.state)
     return (
       <Jumbotron>
+        <h6>...<Link to={"/"}>Return to Article List Page</Link></h6>
         <h4>{author.username} ({author.name}) (User # {author.id})</h4>
         <h6><a href={"mailto:" + author.email}>Email User</a> | {author.phone} | {author.website} </h6>
         <h6>{author.company.name}, {author.company.catchPhrase} - {author.company.bs}</h6>

@@ -32,6 +32,7 @@ export default class ArticleView extends React.Component {
     return (
       <article>
         <Jumbotron>
+          <h6>...<Link to={"/"}>Return to Article List Page</Link></h6>
           <h4>{article.title}</h4>
           <h6>By <Link to={"/author/" + author.id}>{author.username}</Link> (<a href={"mailto:" + author.email}>Email Author</a>)</h6>
           <p>{article.body}</p>
