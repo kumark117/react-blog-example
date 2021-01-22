@@ -29,7 +29,7 @@ export default class ArticleList extends React.Component {
       <ListGroup>
         {articles.map(article =>
           <ListGroup.Item>
-            User: { this.helper_get_user_link(article.userId) }
+            { this.helper_get_user_link(article.userId) }
             Title: <Link to={'/posts/' + article.id}>{article.title}</Link>
             
           </ListGroup.Item>
