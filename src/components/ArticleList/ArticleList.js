@@ -12,6 +12,8 @@ export default class ArticleList extends React.Component {
 
   componentDidMount() {
 
+  /* NOTE: no Support in Internet Explorer for promise.All */
+
     fetch('https://jsonplaceholder.typicode.com/users')
       .then(urawData => urawData.json())
       .then(udata => this.setState({ users: udata }));
