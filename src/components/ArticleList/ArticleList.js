@@ -6,7 +6,8 @@ export default class ArticleList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      articles: []
+      articles: [],
+      users: []
     }
   }
 
@@ -14,13 +15,17 @@ export default class ArticleList extends React.Component {
 
   /* NOTE: no Support in Internet Explorer for Promise.All */
 
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then(urawData => urawData.json())
-      .then(udata => this.setState({ users: udata }));
-
     fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(rawData => rawData.json())
-      .then(data => this.setState({ articles: data }));
+         .then(rawData => rawData.json())
+         .then(data => {
+                  console.log("FETCH 1 OK");
+                  fetch('https://jsonplaceholder.typicode.com/users')
+                       .then(urawData => urawData.json())
+                       .then(udata => {
+                           console.log("FETCH 2 OK");
+                           this.setState({ articles: data, users: udata })
+                           })
+			});
   }
 
   render() {
